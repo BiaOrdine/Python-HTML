@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+    font-family: 'Quicksand', sans-serif;
+    color: #4a148c;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1000px;
+    background-color: #ffffffcc;
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(173, 20, 87, 0.2);
+    backdrop-filter: blur(8px);
+    border: 2px solid #f8bbd0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: #8e24aa;
+    font-size: 36px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ba68c8;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+h2 {
+    color: #000000;
+    font-size: 24px;
+    margin-top: 30px;
+    position: relative;
+}
+
+h2::before {
+    content: "✿";
+    position: absolute;
+    left: -30px;
+    color: #ce93d8;
+    font-size: 20px;
+}
+
+p, ul {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #5e35b1;
+}
+
+ul {
+    padding-left: 20px;
+    list-style: none;
+}
+
+ul li::before {
+    content: "➤";
+    color: #ab47bc;
+    margin-right: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p, ul {
+        font-size: 16px;
+    }
+}
